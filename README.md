@@ -47,3 +47,8 @@ docker run -d --rm -it --name video --env-file ./video/.env -v app-storage:/rail
 
 
 	
+
+
+git init .
+git remote add origin git@github.com:henjifeng/everything_app_video_rails.git
+git branch -M main
