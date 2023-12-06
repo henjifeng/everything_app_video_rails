@@ -30,4 +30,20 @@ docker run -d --rm -it --name another --env-file ./another/.env -v app-storage:/
 ```shell
 mkdir psql/postgres-data
 docker build -t psql ./psql/.
-docker run -d --name postgres --env-file ./psql/.env -v postgres-data:/var/lib/postgresql/data --network everything_app psql
+docker run -d --name postgres --env-file ./psql/.env -v postgres-data:/var/lib/postgresql/data --network everything_app postgres:14.5
+
+
+docker run -d --name postgres -v postgres-data:/var/lib/postgresql/data --network everything_app psql
+
+
+docker run -d --name postgres_14_5 --env-file ./psql/.env -v postgres-data:/var/lib/postgresql/data --network everything_app postgres
+
+
+
+
+docker run -d --rm -it --name video --env-file ./video/.env -v app-storage:/rails/storage -v ./log:/rails/log --network everything_app app
+
+
+
+
+	
